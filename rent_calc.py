@@ -3,7 +3,8 @@
 ###################
 TOTAL_RENT = 8800
 TOTAL_SQUARE_FOOTAGE = 1626 # $5.41 a square foot
-ALPHA = 1.5
+norm = lambda x: 1 + x * (2/10)
+neg_norm = lambda x: 1 - x * (2/10)
 
 daniel = ["daniel", (7 + 10/12)**2] # perfect closet space, fantastic light, roof deck, bay view
 grady = ["grady", 13*(14 + 10/12)] # patio access, not great light, loud potentially
@@ -27,44 +28,46 @@ def get_prices():
     print("total: {}".format(s))
 
 def add_closet():
-    daniel[1] *= 7/10 * ALPHA
-    grady[1] *= 3.5/10 * ALPHA
-    francis[1] *= 6/10 * ALPHA
-    kim_aziz[1] *= 5/10 * ALPHA
-    maya_dan_seb[1] *= 4/10 * ALPHA
-    kelly[1] *= 9/10 * ALPHA
-    ari[1] *= 7/10 * ALPHA
+    daniel[1] *= norm(5/5) 
+    grady[1] *= neg_norm(1/5)
+    francis[1] *= norm(3/5)
+    kim_aziz[1] *= norm(3/5)
+    maya_dan_seb[1] *= norm(1/5)
+    kelly[1] *= norm(3/5)
+    ari[1] *= norm(3/5)
  
 def add_natural_light():
-    daniel[1] *= 10/10 * ALPHA
-    grady[1] *= 4/10 * ALPHA
-    francis[1] *= 7/10 * ALPHA
-    kim_aziz[1] *= 10/10 * ALPHA
-    maya_dan_seb[1] *= 10/10 * ALPHA
-    kelly[1] *= 10/10 * ALPHA
-    ari[1] *= 3/10 * ALPHA
+    daniel[1] *= norm(5/5)
+    grady[1] *= norm(1/5)
+    francis[1] *= norm(3/5)
+    kim_aziz[1] *= norm(5/5)
+    maya_dan_seb[1] *= norm(5/5)
+    kelly[1] *= norm(5/5)
+    ari[1] *= norm(2/5)
 
 def reduce_shared():
-    kim_aziz[1] *=  5/10 * ALPHA
-    maya_dan_seb[1] *= 5/10 * ALPHA
+    daniel[1] *= norm(5/5)
+    grady[1] *= neg_norm(1/5)
+    kim_aziz[1] *=  neg_norm(2/5)
+    maya_dan_seb[1] *= neg_norm(4/5)
 
 def add_views():
-    daniel[1] *= 10/10 * ALPHA
-    grady[1] *= 4/10 * ALPHA
-    francis[1] *= 5/10 * ALPHA
-    kim_aziz[1] *= 10/10 * ALPHA
-    maya_dan_seb[1] *= 10/10 * ALPHA
-    kelly[1] *= 10/10 * ALPHA
-    ari[1] *= 3/10 * ALPHA
+    daniel[1] *= norm(5/5)
+    grady[1] *= norm(2/5)
+    francis[1] *= norm(4/5)
+    kim_aziz[1] *= norm(5/5)
+    maya_dan_seb[1] *= norm(5/5)
+    kelly[1] *= norm(5/5)
+    ari[1] *= norm(2/5)
 
 def add_bonus():
-    daniel[1] *= 10/10 * ALPHA
-    grady[1] *= 6/10 * ALPHA
-    francis[1] *= 2/10 * ALPHA
-    kim_aziz[1] *= 0/10 * ALPHA
-    maya_dan_seb[1] *= 0/10 * ALPHA
-    kelly[1] *= 5/10 * ALPHA
-    ari[1] *= 1/10 * ALPHA
+    daniel[1] *=  norm(5/5)
+    grady[1] *=  norm(1/5)
+    francis[1] *=  norm(2/5)
+    # kim_aziz[1] *=  norm(/5)
+    # maya_dan_seb[1] *=  norm(/5)
+    kelly[1] *=  neg_norm(3/5)
+    ari[1] *=  norm(3/5)
 
 
 
@@ -72,6 +75,6 @@ if __name__ == "__main__":
     add_closet()
     add_natural_light()
     reduce_shared()
-    # add_views()
-    # add_bonus()
+    add_views()
+    add_bonus()
     get_prices()
