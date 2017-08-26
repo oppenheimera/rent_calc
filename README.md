@@ -3,6 +3,7 @@
 Our total square footage is `1626`, and our total rent is $`8800`, putting us at ~`5.41` a square foot.
 
 Our current setup, using rent as a percentage:
+
 | room | % of rent |
 | --- | --- |
 | daniel | 11.988636363636364|
