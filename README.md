@@ -20,12 +20,13 @@ This some obvious caveats. Rent for the triple is the 2nd most expensive, and re
 So try and fix this, I rated rooms on these categories:
 
 | room | closets | :sunny: | shared | :sunrise: | :cool: |
+| --- | --- | --- | --- | --- | --- | 
 | daniel | 7/10 | 10/10 | 10/10 | 10/10 | 10/10 |
 | grady | 2/10 | 2/10 | 10/10 | 3/10 | 6/10 |
 | francis | 6/10 | 7/10 | 10/10 | 5/10 |  2/10 |
 | kim/aziz | 8/10 | 10/10 | 5/10 | 10/10 | 0/10 |
-| maya/dan/seb | 3/10 | 10/10| 0/10 | 9/10 | 0/10 |
+| maya/dan/seb | 3/10 | 10/10| 1/10 | 9/10 | 0/10 |
 | kelly | 10/10 | 10/10 | 10/10 | 10/10 | 8/10 |
 | ari | 7/10 | 2/10 | 10/10 | 2/10 | 1/10 |
 
-These category scores are then transformed into multipliers using the rule: 
+These category scores are then transformed into multipliers by adding the ratio/2 to the tenths-place of a constant multiplier. For instance, Daniel's closet multiplier would be
