@@ -27,6 +27,16 @@ def get_prices():
         print("{}: {}".format(pair[0], pair[1]))
     print("total: {}".format(s))
 
+def pp_prices(fran_perc):
+    rooms = [('daniel', 12.420454545454545), ('grady', 11.920454545454545), ['francis', 11.420454545454545], ('kim', 8.75), ('aziz', 8.75), ('maya', 7.632575757575758), ('dan', 7.632575757575758), ('seb', 7.632575757575758), ('kelly', 12.920454545454545), ('ari', 10.920454545454545)]
+    rooms[2][1] = fran_perc*2
+    over_total = sum([room[1] for room in rooms])
+    over = (over_total - 100) / 9
+    for room in rooms:
+        if room[1] != 'francis':
+            print("{}: {}".format(room[0], room[1] - over))
+
+
 def add_closet():
     daniel[1] *= norm(5/5) 
     grady[1] *= neg_norm(1/5)
@@ -72,9 +82,4 @@ def add_bonus():
 
 
 if __name__ == "__main__":
-    add_closet()
-    add_natural_light()
-    reduce_shared()
-    add_views()
-    add_bonus()
-    get_prices()
+    pp_prices(6.5)

@@ -47,8 +47,20 @@ So bearing this in mind, I've layed out the following scheme:
 | kelly | 12.920454545454545 |
 | ari| 10.920454545454545 |
 
-Here we take the average single rent (11.920454545454545), and adjust `+/- 0.5%` for ranking based on desireability (Kelly > Daniel > Grady > Francis > Ari). For the shared rooms, I just kind of threw out `8.75%` (from an average of  8.238636363636363) as appropriate for the doublet, and the triplets followed from there. 
+Here we take the average single rent (11.920454545454545), and adjust `+/- 0.5%` for ranking based on desireability (Kelly > Daniel > Grady > Francis > Ari). For the shared rooms, I just kind of threw out `8.75%` (from an average of  `8.238636363636363%`) as appropriate for the doublet, and the triplets followed from there. 
 
-With the Sof situation, if we halve Francis's rent, it becomes 5.7102272727272725%, which seems too low for a shared space. I suggest that we up it to between 6 and 6.5 percent and distribute the extra rent evenly among the remaining rooms. 
+With the Sof situation, if we halve Francis's rent, it becomes `5.7102272727272725%`, which seems too low for a shared space. I suggest that we up it to between 6 and 6.5 percent and distribute the extra rent evenly among the remaining rooms. 
 
-If we put *SoFran* at 6.5, an extra 0.17550505050505222% is added to the remaining 9.
+If we put *SoFran* at `6.5%`, an extra `0.17550505050505222%` is added to the remaining 9. This puts us at:
+
+| room | % of rent |
+| --- | --- |
+| daniel | 12.244949494949493 |
+| grady | 11.744949494949493 |
+| kim | 8.574494949494948 |
+| aziz | 8.574494949494948 |
+| maya | 7.457070707070706 |
+| dan | 7.457070707070706 |
+| seb | 7.457070707070706 |
+| kelly | 12.744949494949493 |
+| ari | 10.744949494949493 |
