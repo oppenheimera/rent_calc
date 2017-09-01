@@ -14,6 +14,8 @@ Our current setup, using rent as a percentage:
 | kelly | 12.5 |
 | ari| 10.852272727272727 |
 
+Here, people in shared rooms are responsible for 40.39772727272727% of the rent, and people in singles are responsible for the remaining 59.60227272727273% of the rent.
+
 If we calculate rent as proportional to square footage, using the formula: 
 `total_rent * (room_n_footage / (total_sq_footage - common_space))`, we get this breakdown:
 
@@ -29,21 +31,24 @@ If we calculate rent as proportional to square footage, using the formula:
 
 This some obvious caveats. Rent for the triple is the 2nd most expensive, and rent for Danny G's room (which everyone seemed to want) is the least expensive. In a sentence, this method assumes that square footage is the only priority, when in reality we care about closets, natural light, shared space, views, aesthetics, and random bonuses (like sinks, patio access, or a private roof). 
 
-So try and fix this, I rated rooms on these categories. The scores can be positive or negative and are between -5 and 5:
+I've taken a number of steps to try and fix this, but representing the relationships between the various factors and rent, with the additional complexity of some relationships being more affecting than others, required too much guesswork. There is definitely a linear relationship between square footage and room quality, but going beyond this requires too much subjectivity.
 
-| room | closets | :sunny: | shared | :sunrise: | :cool: |
-| --- | --- | --- | --- | --- | --- | 
-| daniel | 4 | 5 | 10/10 | 10/10 | 10/10 |
-| grady | 2/10 | 2/10 | 10/10 | 3/10 | 6/10 |
-| francis | 6/10 | 7/10 | 10/10 | 5/10 |  2/10 |
-| kim/aziz | 8/10 | 10/10 | 5/10 | 10/10 | 0/10 |
-| maya/dan/seb | 3/10 | 10/10| 1/10 | 9/10 | 0/10 |
-| kelly | 10/10 | 10/10 | 10/10 | 10/10 | 8/10 |
-| ari | 7/10 | 2/10 | 10/10 | 2/10 | 1/10 |
+I think that it behooves us to first consider how overall percentages come into play (i.e. do we really feel alright with a difference of nearly 5% between the most expensive room and the least), and how large these steps should be. From here, we should adjust based on quality or desireability.
 
-These category scores are then normalized to two and added to one to give us the multiplier. For instance, Daniel's closet multiplier would be `1.2`, and Grady's would be `.96`.
+So bearing this in mind, I've layed out the following scheme:
 
-Using this method, and the scores above, we get the following rent breakdown:
-| room | rent |
+| room | % of rent |
 | --- | --- |
-| | |
+| daniel | 12.420454545454545 |
+| grady | 11.920454545454545 |
+| francis | 11.420454545454545 |
+| kim/aziz | 8.75 |
+| maya/dan/seb | 7.632575757575758 |
+| kelly | 12.920454545454545 |
+| ari| 10.920454545454545 |
+
+Here we take the average single rent (11.920454545454545), and adjust `+/- 0.5%` for ranking based on desireability (Kelly > Daniel > Grady > Francis > Ari). For the shared rooms, I just kind of threw out `8.75%` (from an average of  8.238636363636363) as appropriate for the doublet, and the triplets followed from there. 
+
+With the Sof situation, if we halve Francis's rent, it becomes 5.7102272727272725%, which seems too low for a shared space. I suggest that we up it to between 6 and 6.5 percent and distribute the extra rent evenly among the remaining rooms. 
+
+If we put *SoFran* at 6.5, an extra 0.17550505050505222% is added to the remaining 9.
